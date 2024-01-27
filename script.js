@@ -18,6 +18,6 @@ const weekdays = [
 ];
 console.log(weekdays[dayOfWeek]);
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   dayHeading.textContent = `Today is ${weekdays[dayOfWeek]}`;
-// });
+document.addEventListener("DOMContentLoaded", function () {
+  dayHeading.textContent = `Today is ${weekdays[dayOfWeek]}`;
+});
