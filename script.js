@@ -10,6 +10,7 @@ const dayOfWeek = currentDate.getDay();
 const weekdays = [
   {
     name: "Sunday",
+    chores: ["Clean out the fridge", "Laundry"],
   },
   {
     name: "Monday",
@@ -17,11 +18,18 @@ const weekdays = [
   {
     name: "Tuesday",
   },
-
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
+  {
+    name: "Wednesday",
+  },
+  {
+    name: "Thursday",
+  },
+  {
+    name: "Friday",
+  },
+  {
+    name: "Saturday",
+  },
 ];
 console.log(weekdays[dayOfWeek].name);
 
