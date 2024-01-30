@@ -5,6 +5,7 @@ console.log(12);
 //days of the week
 const dayHeading = document.getElementById("dayHeading");
 const choreList = document.getElementById("choreList");
+const lookAhead = document.getElementById("lookAhead");
 
 const currentDate = new Date();
 const dayOfWeek = currentDate.getDay();
@@ -65,5 +66,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Appending the listItem to the choreList
     choreList.appendChild(listItem);
+  });
+});
+
+// looking ahead
+document.addEventListener("DOMContentLoaded", function () {
+  const totalDaysArray = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  totalDaysArray.forEach(function (string) {
+    const listItem = document.createElement("button");
+    listItem.textContent = string;
+    lookAhead.appendChild(listItem);
   });
 });
