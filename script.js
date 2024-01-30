@@ -37,5 +37,12 @@ console.log(weekdays[dayOfWeek].name);
 
 document.addEventListener("DOMContentLoaded", function () {
   dayHeading.textContent = `Today is ${weekdays[dayOfWeek].name}`;
-  choreList.textContent = `${weekdays[dayOfWeek].chores}`;
+  // choreList.textContent = `${weekdays[dayOfWeek].chores}`;
+  const dayChore = weekdays[dayOfWeek].chores;
+  dayChore.forEach(function (string) {
+    const listItem = document.createElement("div");
+    listItem.textContent = string;
+    //adding the x
+    choreList.appendChild(listItem);
+  });
 });
