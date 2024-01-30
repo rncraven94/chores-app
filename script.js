@@ -36,13 +36,34 @@ const weekdays = [
 console.log(weekdays[dayOfWeek].name);
 
 document.addEventListener("DOMContentLoaded", function () {
-  dayHeading.textContent = `Today is ${weekdays[dayOfWeek].name}`;
-  // choreList.textContent = `${weekdays[dayOfWeek].chores}`;
+  const dayHeading = document.getElementById("dayHeading"); // Assuming dayHeading is defined
+  const choreList = document.getElementById("choreList"); // Assuming choreList is defined
+
+  // Assuming weekdays and dayOfWeek are defined elsewhere in your code
   const dayChore = weekdays[dayOfWeek].chores;
+
+  dayHeading.textContent = `Today is ${weekdays[dayOfWeek].name}`;
+
   dayChore.forEach(function (string) {
     const listItem = document.createElement("div");
     listItem.textContent = string;
-    //adding the x
+
+    // Adding the "X" button
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "X";
+
+    removeButton.addEventListener("click", function () {
+      const index = dayChore.indexOf(string);
+      if (index !== -1) {
+        dayChore.splice(index, 1);
+      }
+      listItem.remove();
+    });
+
+    // Appending the "X" button to the listItem
+    listItem.appendChild(removeButton);
+
+    // Appending the listItem to the choreList
     choreList.appendChild(listItem);
   });
 });
