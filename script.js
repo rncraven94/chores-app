@@ -29,6 +29,7 @@ const weekdays = [
   },
   {
     name: "Wednesday",
+    chores: ["Clean groom"],
   },
   {
     name: "Thursday",
