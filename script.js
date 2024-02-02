@@ -33,6 +33,7 @@ const weekdays = [
   },
   {
     name: "Thursday",
+    chores: ["Mop groom and the walkway"],
   },
   {
     name: "Friday",
