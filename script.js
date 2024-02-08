@@ -89,8 +89,12 @@ document.addEventListener("DOMContentLoaded", function () {
     "Saturday",
   ];
   totalDaysArray.forEach(function (string) {
-    const listItem = document.createElement("button");
-    listItem.textContent = string;
-    lookAhead.appendChild(listItem);
+    if (string === weekdays[dayOfWeek].name) {
+      console.log(123);
+    } else {
+      const listItem = document.createElement("button");
+      listItem.textContent = string;
+      lookAhead.appendChild(listItem);
+    }
   });
 });
