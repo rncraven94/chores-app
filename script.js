@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const listItem = document.createElement("button");
       listItem.textContent = string;
       lookAhead.appendChild(listItem);
+      // next section will include the ability to look ahead to chores throughout the week
     }
   });
 });
