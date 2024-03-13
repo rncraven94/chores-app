@@ -98,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // next section will include the ability to look ahead to chores throughout the week
       ////////////////////////////////////////////////////
       ////////////////////////////////////////////////////
+      //
     }
   });
 });
